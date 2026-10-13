@@ -39,6 +39,12 @@ ylabel('Fase (grados)');
 t = 0:1e-6:3e-3;
 
 c = (2*xi*H0/sqrt(1-xi^2)) .* sin(w0*t*sqrt(1-xi^2)) .* exp(-xi*w0*t);
+% CALCULO DE LOS POLOS
+alpha = xi*w0;
+beta = w0*sqrt(1-xi^2);
+
+p1 = -alpha + 1i*beta
+p2 = -alpha - 1i*beta
 
 % Representacion temporal con el eje en milisegundos
 figure;
