@@ -21,6 +21,7 @@ figure;
 
 subplot(2,1,1);
 semilogx(w, magnitud_dB, 'LineWidth', 1.5);
+xlim([100 w(end)*(w(1)/100)]);
 grid on;
 xlabel('Frecuencia angular (rad/s)');
 ylabel('Magnitud (dB)');
@@ -28,6 +29,7 @@ title('Diagrama de Bode del filtro paso banda');
 
 subplot(2,1,2);
 semilogx(w, fase_grados, 'LineWidth', 1.5);
+xlim([100 w(end)*(w(1)/100)]);
 grid on;
 xlabel('Frecuencia angular (rad/s)');
 ylabel('Fase (grados)');
